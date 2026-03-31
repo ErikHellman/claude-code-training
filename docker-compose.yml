@@ -1,6 +1,5 @@
 services:
   claude-code:
-    build: .
     image: ghcr.io/erikhellman/claude-code-training:latest
     stdin_open: true
     tty: true

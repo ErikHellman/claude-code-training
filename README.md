@@ -74,7 +74,8 @@ Everything you create at `/workspace` inside the container is immediately visibl
 ```
 .
 ├── Dockerfile                        # Container definition
-├── docker-compose.yml                # Compose config for students
+├── docker-compose.yml                # Compose config for students (pulls pre-built image)
+├── docker-compose.dev.yml            # Local build override for developers
 ├── .github/
 │   └── workflows/
 │       └── docker-publish.yml        # Builds and pushes image to ghcr.io on push to main
@@ -85,11 +86,7 @@ Everything you create at `/workspace` inside the container is immediately visibl
 ### Building locally
 
 ```bash
-docker build -t claude-code-training .
-docker run -it --rm \
-  -v claude-auth:/home/student/.claude \
-  -v $(pwd)/workspace:/workspace \
-  claude-code-training
+docker compose -f docker-compose.yml -f docker-compose.dev.yml run --rm claude-code
 ```
 
 ### Adding tools
