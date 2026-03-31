@@ -90,6 +90,9 @@ ENV PATH="/usr/local/go/bin:/home/student/.npm-global/bin:/home/student/.local/b
 USER student
 WORKDIR /home/student
 
+# Pre-create .claude so the Docker volume initialises with student ownership
+RUN mkdir -p ~/.claude
+
 # ── Oh My Zsh + plugins ────────────────────────────────────────────────────
 RUN RUNZSH=no CHSH=no sh -c \
       "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
