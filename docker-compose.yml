@@ -1,6 +1,6 @@
 services:
   claude-code:
-    image: ghcr.io/YOUR_GITHUB_USERNAME/claude-code-training:latest
+    image: ghcr.io/erikhellman/claude-code-training:latest
     stdin_open: true
     tty: true
     volumes:
