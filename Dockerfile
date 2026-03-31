@@ -81,7 +81,8 @@ RUN DPKG_ARCH=$(dpkg --print-architecture) \
     && rm -rf /tmp/eza
 
 # ── Student user ───────────────────────────────────────────────────────────
-RUN useradd -m -s /bin/zsh -u 1000 student
+RUN usermod -l student -d /home/student -m -s /bin/zsh node \
+    && groupmod -n student node
 
 ENV PATH="/usr/local/go/bin:/home/student/.npm-global/bin:/home/student/.local/bin:${PATH}" \
     NPM_CONFIG_PREFIX=/home/student/.npm-global
