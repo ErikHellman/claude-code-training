@@ -14,7 +14,13 @@ Students get a pre-configured shell with Claude Code and common development tool
 | Go 1.23 | Go toolchain |
 | Git + [GitHub CLI](https://cli.github.com/) (`gh`) | Version control and GitHub integration |
 | [Oh My Zsh](https://ohmyz.sh/) | Shell with autosuggestions and syntax highlighting |
-| `fzf`, `ripgrep`, `jq`, `bat` | Terminal productivity tools |
+| [`delta`](https://github.com/dandavison/delta) | Syntax-highlighted git diffs (configured as default git pager) |
+| [`lazygit`](https://github.com/jesseduffield/lazygit) (`lg`) | Terminal UI for git — review and stage changes interactively |
+| [`glow`](https://github.com/charmbracelet/glow) | Render markdown in the terminal |
+| [`eza`](https://github.com/eza-community/eza) | Modern `ls` with colors and git status per file |
+| [`zoxide`](https://github.com/ajeetdsouza/zoxide) (`z`) | Smart `cd` — jumps to frecently used directories by partial name |
+| `fzf`, `ripgrep`, `jq`, `bat` | Fuzzy finder, fast grep, JSON processing, syntax-highlighted cat |
+| `tree`, `tmux`, `fd`, `make` | Directory tree, terminal multiplexer, fast file finder, build tool |
 | `vim`, `nano` | In-container text editors |
 
 ## Student setup
